@@ -17,3 +17,6 @@ All art assets are made by [Kenney](https://kenney.nl/)
 - [ ] Game Menu
 - [ ] Respawn Mechanics
 - [ ] Give enemies ability to shoot
+- [ ] Pickupable items
+- [ ] Complex enemy movement
+- [ ] Boss Fight

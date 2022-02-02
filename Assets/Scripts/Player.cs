@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
         }
 
         //Maybe allow players to use only Primary or Secondary fire instead of both ?
-        if(Input.GetButton("Fire1")){
+        if(Input.GetButtonDown("Fire1")){
             GameObject newFire = Instantiate(fire_small, gunPoint.transform.position, Quaternion.identity);
             Destroy (newFire, 2.4f);
         }

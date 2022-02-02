@@ -8,7 +8,11 @@ public class EnemyCore : MonoBehaviour
     public int health = 10;
     public int damage = 10;
     int scoreToAward = 50;
+    [SerializeField] Vector2 timeBetweenShots;
+    [SerializeField] float destroyAfter = 2.3f;
     [SerializeField] float moveSpeed = 5f; 
+    [SerializeField] GameObject bullet; 
+    bool isAbletoShoot = false;
     Rigidbody2D rb;
     GameObject player;
 
@@ -20,6 +24,9 @@ public class EnemyCore : MonoBehaviour
         //Movement
         rb = this.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, -moveSpeed);
+
+        //Shooting
+        StartCoroutine(Shoot());
     }
 
     //Taking Damage
@@ -34,6 +41,14 @@ public class EnemyCore : MonoBehaviour
         if(health <= 0){
             player.GetComponent<Player>().ScoreUpdate(scoreToAward);
             Destroy(this.gameObject);
+        }
+    }
+
+    IEnumerator Shoot(){
+        while(true){
+            yield return new WaitForSeconds(Random.Range(timeBetweenShots.x, timeBetweenShots.y));
+            GameObject enemy = Instantiate(bullet, this.transform.position, Quaternion.identity);
+            Destroy(enemy, destroyAfter);
         }
     }
 

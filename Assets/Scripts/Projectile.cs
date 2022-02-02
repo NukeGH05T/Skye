@@ -9,7 +9,7 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
-        //It just goes down lmao, maybe add something fancy here depending on the projectile
+        //It just goes up lmao, maybe add something fancy here depending on the projectile
         transform.Translate((transform.up * speed * Time.deltaTime));
     }
 

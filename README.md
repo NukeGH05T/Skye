@@ -13,10 +13,10 @@ All art assets are made by [Kenney](https://kenney.nl/)
 - [x] Primary Fire
 - [x] Secondary Fire
 - [x] Enemy Death
+- [x] Give enemies ability to shoot
+- [x] Pickupable items[Health Packs]
 - [ ] Pause State
 - [ ] Game Menu
 - [ ] Respawn Mechanics
-- [ ] Give enemies ability to shoot
-- [ ] Pickupable items
 - [ ] Complex enemy movement
 - [ ] Boss Fight
